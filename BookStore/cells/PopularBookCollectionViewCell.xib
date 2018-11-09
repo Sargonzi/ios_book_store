@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PopularBookCollectionViewCell" customModule="BookStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="545" height="296"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="545" height="296"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-0d-6vi">
+                        <rect key="frame" x="0.0" y="0.0" width="545" height="296"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Books" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dq7-xr-y6g">
+                                <rect key="frame" x="8" y="8" width="93.5" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkQ-Jp-jou">
+                                <rect key="frame" x="503" y="8" width="34" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="More"/>
+                                <connections>
+                                    <action selector="onClickMore:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2iQ-h6-IFd"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-p6-9we">
+                                <rect key="frame" x="8" y="36" width="529" height="244"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wRx-w7-ZPi">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nkQ-Jp-jou" firstAttribute="bottom" secondItem="dq7-xr-y6g" secondAttribute="bottom" id="3gX-mb-2nu"/>
+                            <constraint firstItem="nkQ-Jp-jou" firstAttribute="top" secondItem="dq7-xr-y6g" secondAttribute="top" id="8Yo-mk-85V"/>
+                            <constraint firstItem="nkQ-Jp-jou" firstAttribute="top" secondItem="Sug-0d-6vi" secondAttribute="top" constant="8" id="9Wk-1H-Ehb"/>
+                            <constraint firstItem="dq7-xr-y6g" firstAttribute="leading" secondItem="Sug-0d-6vi" secondAttribute="leading" constant="8" id="Ao8-4g-Z4n"/>
+                            <constraint firstItem="zRF-p6-9we" firstAttribute="leading" secondItem="Sug-0d-6vi" secondAttribute="leading" constant="8" id="Cuz-Oe-k3h"/>
+                            <constraint firstAttribute="bottom" secondItem="zRF-p6-9we" secondAttribute="bottom" constant="16" id="NL3-bS-u1x"/>
+                            <constraint firstItem="dq7-xr-y6g" firstAttribute="top" secondItem="Sug-0d-6vi" secondAttribute="top" constant="8" id="Pas-ra-yCt"/>
+                            <constraint firstItem="zRF-p6-9we" firstAttribute="top" secondItem="Sug-0d-6vi" secondAttribute="top" constant="36" id="eu9-Pq-j6l"/>
+                            <constraint firstAttribute="trailing" secondItem="nkQ-Jp-jou" secondAttribute="trailing" constant="8" id="llK-5A-hEJ"/>
+                            <constraint firstAttribute="trailing" secondItem="zRF-p6-9we" secondAttribute="trailing" constant="8" id="wgH-5O-Ukp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Sug-0d-6vi" secondAttribute="trailing" id="Sej-Mk-Bti"/>
+                <constraint firstAttribute="bottom" secondItem="Sug-0d-6vi" secondAttribute="bottom" id="bOP-jV-hid"/>
+                <constraint firstItem="Sug-0d-6vi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="obM-QN-LOk"/>
+                <constraint firstItem="Sug-0d-6vi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pe0-sP-bWa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="545" height="296"/>
+            <connections>
+                <outlet property="btnMore" destination="nkQ-Jp-jou" id="uO0-0l-ROL"/>
+                <outlet property="lblPopularBooks" destination="dq7-xr-y6g" id="t40-c3-EaG"/>
+                <outlet property="popularBookCollectionview" destination="zRF-p6-9we" id="NSP-u5-qsb"/>
+            </connections>
+            <point key="canvasLocation" x="189.59999999999999" y="171.81409295352324"/>
+        </collectionViewCell>
+    </objects>
+</document>
